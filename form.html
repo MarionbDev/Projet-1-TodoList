@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet n°1</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>To Do List</h1>
+    </nav>
+
+    <!-- ajout d'une tache-->
+    <!--modal-container-->
+
+    <div class="modal-container">
+      <div class="overlay modal-trigger"></div>
+      <div class="modal">
+        <button id="submit" class="close-modal modal-trigger">OK</button>
+        <form name="form" id="form" class="form-container">
+          <input type="text" id="todoInput" placeholder="A Faire" value="" />
+          <input type="date" id="date" name="date value="" />
+          <textarea
+            id="description"
+            name="Description"
+            placeholder="Description"
+            value=""
+          ></textarea>
+        </form>
+      </div>
+    </div>
+
+    <button class="modal-btn modal-trigger">Ajouter</button>
+
+    <div id="task-container" class="task-container">
+      <div class="gg-close"></div>
+    </div>
+
+    <!-- <div id="task-en-cours" class="task-container">
+      <h2>Tâches en cours</h2>
+    </div>
+    <div id="task-finish" class="task-container">
+      <h2>Tâches terminées</h2>
+    </div> -->
+    <footer>
+      <p>©MAAC</p>
+    </footer>
+    <script src="form.js"></script>
+  </body>
+</html>
