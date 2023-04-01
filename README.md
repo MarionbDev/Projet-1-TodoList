@@ -1,4 +1,4 @@
-# Projet n°1 : Todo List
+# Projet n°1 : To-Do List
 
 ## Réalisation d'un site Todo List (en responsive)
 
