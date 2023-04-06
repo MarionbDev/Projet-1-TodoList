@@ -1,4 +1,4 @@
-# Projet n°1 : Todo List
+# Projet n°1 : To-Do List
 
 ## Réalisation d'un site Todo List (en responsive)
 
@@ -13,10 +13,10 @@ Durée du projet : 3 semaines
 ### Fonctionnalités développées : 
 - Système de création de compte utilisateur
 - Page de contact
-- Créer sa première Todo List à l'aide d'un formulaire de tâche
+- Créer sa première Todo List à l'aide d'un formulaire
 - La tâche est créée :
   + Timer d'échéance personnalisé par 3 couleurs suivant le délai restant avant échéance de la tâche
-  + Fonctionnalité permettant de déplacer une tâche étape par étape
+  + Fonctionnalité permettant de déplacer une tâche suivant son avancement
   + Suppression d'une tâche possible à tout moment
   + Suppression possible de l'ensemble des tâches terminées
 
