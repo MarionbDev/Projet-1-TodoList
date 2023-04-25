@@ -1,6 +1,6 @@
 # Projet n°1 : To-Do List
 
-## Réalisation d'un site Todo List (en responsive)
+## Réalisation d'un site To-Do List (en responsive)
 
 Permettre de mieux anticiper les tâches (prioritaires ou secondaires) pour mieux les préparer mais aussi pour se libérer l'esprit.
 
