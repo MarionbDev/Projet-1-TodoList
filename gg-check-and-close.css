@@ -10,10 +10,6 @@
   border-radius: 100px;
 }
 
-button.gg-check {
-  margin: 0px 0px 1px 35px;
-}
-
 .gg-check::after {
   content: "";
   display: block;

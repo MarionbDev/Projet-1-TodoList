@@ -60,48 +60,6 @@ textarea {
   resize: none;
 }
 
-/* Btn = ajout de tache */
-#add-btn {
-  width: 12%;
-  position: fixed;
-  z-index: 1;
-  left: 1%;
-  top: 19%;
-  padding: 10px;
-  font-size: 24px;
-  font-weight: bolder;
-  margin: 2px;
-  cursor: pointer;
-  border-radius: 100%;
-  border: none;
-  background-color: #c8bcab;
-  color: #fff;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-/* Btn = supp tache terminées */
-#supp-task {
-  width: 12%;
-  position: absolute;
-  z-index: 1;
-  left: 1%;
-  bottom: 14%;
-  padding: 10px 14px;
-  font-size: 24px;
-  font-weight: bolder;
-  margin: 2px;
-  cursor: pointer;
-  border-radius: 100%;
-  border: none;
-  background-color: #c8bcab;
-  color: #fff;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-section {
-  display: flex;
-}
-
 /* LE MODAL */
 /* la taille */
 .modal-container {
@@ -155,16 +113,17 @@ section {
   color: #fff;
 }
 
-/* Mise en forme temporaire des tâches ajoutées */
+/* Mise en forme des tâches ajoutées */
 /* Ajout des taches */
 .task-container {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   min-height: 60px;
   max-height: 70px;
   display: grid;
-  grid-template-columns: 35% 40% 25%;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 40% 35% 25%;
+  grid-template-rows: repeat(4, 1fr);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   list-style-type: none;
@@ -172,11 +131,12 @@ section {
   border-radius: 8px;
   overflow: scroll;
   text-overflow: hidden;
+  cursor: pointer;
 }
 
 .newDate {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 1/3;
   font-size: 14px;
   margin-left: 20px;
   width: 100%;
@@ -190,22 +150,32 @@ section {
 
 .newDescription {
   grid-column: 1/3;
-  grid-row: 2/4;
+  grid-row: 2/5;
+  margin-top: 5px;
 }
 p.newDate {
   font-size: 12px;
   padding: 0px 0px;
   margin: 8px 0 0 12px;
+  justify-content: end;
 }
 
 .newTodo {
   word-wrap: break-word;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  justify-self: start;
+}
+
+h3 .newTodo {
+  width: 200px;
 }
 
 .gg-check {
   margin-top: 0px;
+  margin-bottom: 12px;
   margin-left: auto;
-  margin-right: 15px;
+  margin-right: 12px;
   grid-column: 3/4;
   grid-row: 1/2;
 }
@@ -213,7 +183,7 @@ p.newDate {
 .gg-close {
   margin-top: 0px;
   margin-left: auto;
-  margin-right: 8px;
+  margin-right: 12px;
   grid-column: 3/4;
   grid-row: 2/3;
 }
@@ -226,16 +196,9 @@ p.newDate {
   grid-row: 1/2;
 }
 
-.task-container {
-  cursor: pointer;
-}
-
-.task-container > h3 {
-  width: 130px;
-}
 .task-container > h3,
 p {
-  font-size: 12px;
+  font-size: 10px;
   height: 20%;
   display: flex;
   justify-content: flex-start;
@@ -244,30 +207,19 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  /* Btn = ajout de tache */
-  section #add-btn {
-    position: absolute;
-    width: 4%;
-    left: 12.9%;
-    top: 26%;
-    padding: 0px 0px;
-    font-size: 45px;
+  .task-container > h3,
+  p {
+    font-size: 13px;
   }
-
-  /* Btn = supp tache terminées */
-  section #supp-task {
-    position: relative;
-    width: 12%;
-    bottom: 50%;
-    left: -6%;
-    padding: 0px 0px 5px 0px;
-    font-size: 43px;
+  p.newDate {
+    font-size: 15px;
   }
+}
 
-  /* Mise en forme temporaire des tâches ajoutées */
-  /* Ajout des taches */
+@media screen and (min-width: 1024px) {
   .task-container {
     overflow: auto;
+    grid-template-columns: 50% 40% 10%;
   }
 
   #form {
@@ -315,20 +267,17 @@ p {
 
   .newDate {
     display: flex;
-    justify-content: center;
+    justify-content: end;
   }
 
   p.newDate {
-    font-size: 15px;
-  }
-
-  .task-container {
-    grid-template-columns: 30% 55% 15%;
+    font-size: 16px;
+    justify-content: center;
   }
 
   .task-container > h3,
   p {
-    font-size: 18px;
-    padding: 2px;
+    font-size: 14px;
+    padding: 10px;
   }
 }

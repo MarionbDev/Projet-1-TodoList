@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet n°1</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Lien vers CSS croix supprimer -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -15,47 +14,56 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="gg-check-and-close.css" />
-    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="formStyle.css" />
     <link rel="stylesheet" href="styleburger.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kristi&family=My+Soul&family=Petemoss&family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>    
+  <body>
     <header>
-    <nav> 
-      <img src="logotodolist3.png" alt="logo" class="logo">
-      <h1><a href="index.html">To Do List</a></h1>
-      <div class="toggle">
-        <i class="fas fa-bars ouvrir"></i> <i class="fas fa-times fermer"></i>
-      </div>
-      <ul class="menu">
-        <li>
-          <button onclick="window.location.href = 'connexion.html';" class="btn">
-            Connexion
-          </button>
-        </li>
-        <li>
-          <button onclick="window.location.href = 'enregistrer.html';" class="btn">
-           S'enregistrer
-          </button>
-        </li>
-        <li>
-          <button onclick="window.location.href = 'burgercontact.html';" class="btn">
-            Contact
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <nav>
+        <img src="logotodolist3.png" alt="logo" class="logo" />
+        <h1><a href="index.html">To Do List</a></h1>
+        <div class="toggle">
+          <i class="fas fa-bars ouvrir"></i> <i class="fas fa-times fermer"></i>
+        </div>
+        <ul class="menu">
+          <li>
+            <button
+              onclick="window.location.href = 'connexion.html';"
+              class="btn"
+            >
+              Connexion
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="window.location.href = 'enregistrer.html';"
+              class="btn"
+            >
+              S'enregistrer
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="window.location.href = 'burgercontact.html';"
+              class="btn"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <div id="allTask">
       <div id="section1">
-        <h2>Tâches à faire</h2>
-        <section>
+        <section class="section">
           <div class="sous-tache">
-            <div id="task-container" class="gauche">
+            <h2>Tâches à faire</h2>
+            <div id="task-container" class="container">
               <div id="modal-container" class="modal-container">
                 <div class="overlay modal-trigger"></div>
                 <div class="modal">
@@ -87,39 +95,34 @@
                   </form>
                 </div>
               </div>
-            </div> </div
-          ><button id="add-btn" class="modal-btn modal-trigger">+</button>
+            </div>
+            <button id="add-btn" class="modal-btn modal-trigger">+</button>
+          </div>
         </section>
       </div>
       <div class="grid">
         <div id="section2">
-          <h2>Tâches en cours</h2>
           <section class="section">
-            <!-- <div class="gauche colonne">
-                <div class="bouton2">
-                  <p>⚠</p>
-                </div> -->
             <div class="sous-tache">
-              <div id="task-en-cours" class="gauche"></div>
+              <h2>Tâches en cours</h2>
+              <div id="task-en-cours" class="container"></div>
             </div>
           </section>
         </div>
         <div id="section3">
-          <h2>Tâches terminées</h2>
           <section class="section">
             <div class="sous-tache">
-              <div id="task-finish" class="gauche"></div>
+              <h2>Tâches terminées</h2>
+              <div id="task-finish" class="container"></div>
               <button id="supp-task">-</button>
             </div>
           </section>
         </div>
       </div>
     </div>
-
     <footer>
       <p>© MAAC - 2023</p>
     </footer>
-
     <script src="script.js"></script>
     <script src="form.js"></script>
     <script src="scriptburger.js"></script>
